@@ -1,0 +1,29 @@
+span.notSign:hover{
+    font-weight: bold;
+}
+
+
+.scroll-content {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.list > .item-block:first-child {
+    border: medium none;
+}
+
+.item:not(.reMode_selected) {
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border: medium none;
+}
+
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}

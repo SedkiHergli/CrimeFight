@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar style="--background: url(../assets/imgs/background16.jpg);">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Weather</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;" padding>
+  <ion-grid style="background: #ffffff40;border-style: solid;border-color: #ffffff40;">
+      <ion-row>
+          <ion-col>
+              <p style="text-align: center;font-weight: bold;font-size: 20px">
+              {{city}}
+              </p>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <p style="text-align: center;font-weight: bold;font-size: 20px">
+              {{lastUp}}
+              </p>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        <img [src]='icon' style="display: block;margin-left: auto;margin-right: auto;width: 30%;"/>
+        <p style="text-align: center;font-weight: bold;font-size: 20px">
+        {{description}}
+        </p>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <p style="text-align: center;font-weight: bold;font-size: 20px">
+              {{temp}}
+              </p>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <p style="text-align: center;font-weight: bold;font-size: 20px">
+              {{humidity}}
+              </p>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <p style="text-align: center;font-weight: bold;font-size: 20px">
+              {{sunRise}}
+              </p>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <p style="text-align: center;font-weight: bold;font-size: 20px">
+              {{sunSet}}
+              </p>
+            </ion-col>
+      </ion-row>
+
+  </ion-grid>
+
+ 
+</ion-content>

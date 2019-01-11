@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .col-container {
+    display: table;
+    width: 100%;
+  }
+  .col {
+    display: table-cell;
+    padding: 16px;
+    margin: 5px;
+    width: 33%;
+  }
+  
+  @media only screen and (max-width: 200px) {
+    .col { 
+      display: block;
+      width: 100%;
+    }
+  }
+  .col:hover{
+    background: #c71f1f77;
+}
+
+p{
+  font-weight: bold;
+}

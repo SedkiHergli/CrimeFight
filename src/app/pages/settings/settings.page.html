@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar style="--background: url(../assets/imgs/background16.jpg);">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;" >
+<ion-list style="background: #ffffff00;">
+  <ion-item (click)="ChangeAccountU()" class="onclick" style="background: #47464740;" >
+    <ion-icon slot="start" name="person"></ion-icon>
+    <ion-label>Modify User</ion-label>
+  </ion-item>
+  <ion-item (click)="ChangePasswordU()" class="onclick">
+    <ion-icon slot="start" name="lock"></ion-icon>
+    <ion-label>Modify Password</ion-label>
+  </ion-item>
+</ion-list> 
+</ion-content>
