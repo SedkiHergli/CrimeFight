@@ -11,6 +11,7 @@ import { CrimeDetailPage } from '../crime-detail/crime-detail.page';
 })
 export class VerifyCrimePage implements OnInit {
   crimes:any;
+  errMess: string;
   constructor(
     private modalCtrl:ModalController,
     private userService: UserService,
@@ -33,7 +34,7 @@ export class VerifyCrimePage implements OnInit {
       this.storage.get("access_token").then(tokenn => {
         this.userService.getApiUser(user.email,tokenn).subscribe(usser=>{
           this.crimes = usser[0].crimeReports;
-        });
+        }, errmess => this.errMess = <any>errmess);
       });
     });
   }

@@ -48,7 +48,12 @@ export class AccountuPage implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    this.storage.get(REFRESH_TOKEN_KEY).then(tokeni => {
+      this.storage.get(TOKEN_KEY).then(tokenn => {
+      this.authService.updateToken("auth",tokeni,tokenn).subscribe(resp=>{
+        this.storage.set(TOKEN_KEY,resp["access_token"]);
+      });
+    });});
     this.getWeather();
     const sourcee = interval(3599000);
     this.subscriptionn = sourcee.subscribe(val => {
