@@ -8,6 +8,10 @@ import { IonicModule } from '@ionic/angular';
 import { MapPageModule } from '../pages/map/map.module';
 import { WeatherPageModule } from '../pages/weather/weather.module';
 import { SettingsPageModule } from '../pages/settings/settings.module';
+import { AddCrimePageModule } from '../pages/add-crime/add-crime.module';
+import { VerifyCrimePageModule } from '../pages/verify-crime/verify-crime.module';
+import { AddCrimesPageModule } from '../pages/add-crimes/add-crimes.module';
+import { CrimeDetailPageModule } from '../pages/crime-detail/crime-detail.module';
 
 @NgModule({
   imports: [
@@ -17,7 +21,11 @@ import { SettingsPageModule } from '../pages/settings/settings.module';
     AccountuPageModule,
     MapPageModule,
     WeatherPageModule,
-    SettingsPageModule
+    SettingsPageModule,
+    AddCrimePageModule,
+    AddCrimesPageModule,
+    CrimeDetailPageModule,
+    VerifyCrimePageModule
   ],  
   declarations: [TabsComponent]
 })

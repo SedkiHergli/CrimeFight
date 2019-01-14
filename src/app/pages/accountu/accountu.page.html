@@ -7,6 +7,33 @@
   </ion-toolbar>
 </ion-header>
  
-<ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;" padding>
+<ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;">  
+  <ion-list style="background: none;padding: 0px;">
+    <ion-item (click)="openAddCrime()" style="background: #6092c750;border-bottom-color: #040d0e;border-bottom-style: solid;border-bottom-width: thin;">
+        <ion-icon name="add-circle" slot="start" style="margin-right: 5%;"></ion-icon>
+      <h3>Add Crime</h3>
+    </ion-item>
+    <ion-item (click)="openVerify()" style="background: #6092c750;border-bottom-color: #040d0e;border-bottom-style: solid;border-bottom-width: thin;">
+        <ion-icon name="arrow-dropright-circle" slot="start" style="margin-right: 5%;"></ion-icon>
+      <h3>Verify Added Crime</h3>
+    </ion-item>
+  </ion-list>
+  <ion-grid (click)="openWeather()" style="background: #ffffff40;border-style: solid;border-color: #ffffff40;">
+    <ion-row>
+        <ion-col>
+            <p style="text-align: center;font-weight: bold;font-size: 20px">
+            {{city}}
+            </p>
+          </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      <img [src]='icon' style="display: block;margin-left: auto;margin-right: auto;width: 30%;"/>
+      <p style="text-align: center;font-weight: bold;font-size: 20px">
+      {{description}}
+      </p>
+    </ion-col>
+    </ion-row>
+</ion-grid>
   
   </ion-content>

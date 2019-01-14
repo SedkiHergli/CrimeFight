@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar style="--background: url(../assets/imgs/background16.jpg);">
+    <ion-title>Verify Crime</ion-title>
+          <ion-buttons slot="start">
+        <ion-back-button (click)='closeModal()' defaultHref="/tabs/(accountu:accountu)" [text]="buttonText" [icon]="buttonIcon"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;">
+  <ion-list style="background: #f3ebebd1;border-style: solid;border-color: #ffffff9e;" >
+    <ion-grid >
+      <ion-row *ngFor="let p of crimes" (click)="goTouser(p)" style="border-style: solid;border-color: #ffffff9e;border-bottom: #7f67ef;border-top-style: hidden;
+      border-right-style: hidden;border-left-style: hidden;border-bottom-style:solid">
+        <ion-col style="color: #222428;font-weight: bold;">
+          {{p?.type}}
+        </ion-col>
+        <ion-col style="color: #222428;font-weight: bold;">
+          {{p?.description}}
+        </ion-col>
+        <ion-col style="color: #222428;font-weight: bold;">
+          {{p?.locationDescription}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

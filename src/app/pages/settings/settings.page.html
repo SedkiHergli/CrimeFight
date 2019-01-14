@@ -8,14 +8,14 @@
 </ion-header>
  
 <ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;" >
-<ion-list style="background: #ffffff00;">
-  <ion-item (click)="ChangeAccountU()" class="onclick" style="background: #47464740;" >
+<ion-list style="background: #ffffff00;padding: 0px;">
+  <ion-item (click)="ChangeAccountU()" class="onclick" style="background: #47464740;border-bottom-color: #040d0e;border-bottom-style: solid;border-bottom-width: thin;" >
     <ion-icon slot="start" name="person"></ion-icon>
-    <ion-label>Modify User</ion-label>
+    <h3>Modify User</h3>
   </ion-item>
-  <ion-item (click)="ChangePasswordU()" class="onclick">
+  <ion-item (click)="ChangePasswordU()" class="onclick" style="background: #47464740;border-bottom-color: #040d0e;border-bottom-style: solid;border-bottom-width: thin;">
     <ion-icon slot="start" name="lock"></ion-icon>
-    <ion-label>Modify Password</ion-label>
+    <h3>Modify Password</h3>
   </ion-item>
 </ion-list> 
 </ion-content>

@@ -28,6 +28,7 @@
     "@ionic/angular": "^4.0.0-beta.16",
     "@ionic/storage": "^2.2.0",
     "cordova-plugin-geolocation": "4.0.1",
+    "cordova-plugin-googlemaps": "2.4.6",
     "cordova-sqlite-storage": "2.6.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",

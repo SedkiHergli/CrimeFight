@@ -16,8 +16,13 @@ const REFRESH_TOKEN_KEY = 'refresh_token';
 })
 export class UserService {
 
-  constructor(private authService: AuthService, private http: HttpClient, private alertController: AlertController, 
-    private helper: JwtHelperService, private storage: Storage) { }
+  constructor(
+    private authService: AuthService, 
+    private http: HttpClient, 
+    private alertController: AlertController, 
+    private helper: JwtHelperService, 
+    private storage: Storage
+  ) { }
 
 getApiUser(email,token):Observable<any> {
   const httpOptions = {

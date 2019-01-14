@@ -5,7 +5,7 @@ import { AlertController, NavController, LoadingController } from '@ionic/angula
 import { LocationService } from '../../services/location.service';
 import { Storage } from '@ionic/storage';
 
-
+ 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -19,7 +19,14 @@ export class RegisterPage implements OnInit {
   sexe: string;
 
 
-  constructor(private storage: Storage, public locationService: LocationService, public loadingController: LoadingController, private formBuilder: FormBuilder, private authService: AuthService, public alertController: AlertController, private navContrl: NavController) { 
+  constructor(
+    private storage: Storage, 
+    public locationService: LocationService, 
+    public loadingController: LoadingController,
+     private formBuilder: FormBuilder, 
+     private authService: AuthService, 
+     public alertController: AlertController, 
+     private navContrl: NavController) { 
 
   }
 

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar style="--background: url(../assets/imgs/background16.jpg);">
+    <ion-title>Crime Details</ion-title>
+          <ion-buttons slot="start">
+        <ion-back-button (click)='closeModal()' defaultHref="/tabs/(accountu:accountu)" [text]="buttonText" [icon]="buttonIcon"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;">
+  <ion-list style="background: #f3ebebd1;border-style: solid;border-color: #ffffff9e;" >
+    <ion-grid >
+      <ion-row style="border-style: solid;border-color: #ffffff9e;border-bottom: #7f67ef;border-top-style: hidden;
+      border-right-style: hidden;border-left-style: hidden;border-bottom-style:solid;
+      color: #222428;font-weight: bold;">
+      <span style="color:blue">Type of crime: </span> {{ p?.type}}
+      </ion-row>
+      <ion-row style="border-style: solid;border-color: #ffffff9e;border-bottom: #7f67ef;border-top-style: hidden;
+      border-right-style: hidden;border-left-style: hidden;border-bottom-style:solid;
+      color: #222428;font-weight: bold;">
+      <span style="color:blue">Crime description: </span> {{ p?.description}}
+      </ion-row>
+      <ion-row style="border-style: solid;border-color: #ffffff9e;border-bottom: #7f67ef;border-top-style: hidden;
+      border-right-style: hidden;border-left-style: hidden;border-bottom-style:solid;
+      color: #222428;font-weight: bold;">
+      <span style="color:blue">Crime location description: </span> {{ p?.locationDescription}}
+      </ion-row>
+      <ion-row style="border-style: solid;border-color: #ffffff9e;border-bottom: #7f67ef;border-top-style: hidden;
+      border-right-style: hidden;border-left-style: hidden;border-bottom-style:solid;
+      color: #222428;font-weight: bold;">
+      <span style="color:blue">Created at: </span> {{ p?.updatedAt}}
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  <div #map id="map" style="height: 100%;width: 100%;position: absolute;;"></div>
+</ion-content>

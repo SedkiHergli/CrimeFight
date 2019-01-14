@@ -46,9 +46,6 @@ export class MapPage implements OnInit {
       let mapOptions = {
         zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: false,
-        streetViewControl: false,
-        fullscreenControl: false
       }
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
  
@@ -71,7 +68,7 @@ export class MapPage implements OnInit {
     position: this.map.getCenter()
     });
 
-    let content = "<p>"+ message + "!</p>";          
+    let content = "<h5>"+ message + "</h5>";          
     let infoWindow = new google.maps.InfoWindow({
     content: content
     });
