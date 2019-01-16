@@ -10,7 +10,7 @@ import {AddCrimePage} from '../add-crime/add-crime.page'
 import { VerifyCrimePage } from '../verify-crime/verify-crime.page';
 
 
-declare var google;
+
 const TOKEN_KEY = 'access_token';
 const REFRESH_TOKEN_KEY = 'refresh_token';
 

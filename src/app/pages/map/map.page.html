@@ -6,7 +6,26 @@
     <ion-title>Map</ion-title>
   </ion-toolbar>
 </ion-header>
- 
 <ion-content style="--background: url(assets/imgs/background16.jpg) center / 100%;">
-  <div #map id="map" style="height: 100%;width: 100%"></div>
- </ion-content>
+  <ion-list style="background: none;padding: 0px;">
+  <ion-item (click)="openCrime()" style="background: #6092c750;border-bottom-color: #040d0e;border-bottom-style: solid;border-bottom-width: thin;">
+      <img slot="start" [src]='icon' style="max-width: 5%;margin-right: 3%;" />
+    <h4>Show Predicted Crimes Types</h4>
+  </ion-item>
+  </ion-list>
+  <ion-list [hidden]="!myVar" style="background: #f3ebebd1;border-style: solid;border-color: #ffffff9e;" >
+
+    <ion-grid>
+      <ion-row *ngFor="let p of crimes" style="border-style: solid;border-color: #ffffff9e;border-bottom: #7f67ef;border-top-style: hidden;
+      border-right-style: hidden;border-left-style: hidden;border-bottom-style:solid">
+        <ion-col size='6' style="color: #222428;font-weight: bold;">
+          {{p?.type}} 
+        </ion-col>
+        <ion-col style="color: #222428;font-weight: bold;">
+          {{p?.perc}} %
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  <div [hidden]="myVar" #map id="map" style="height: 100%;width: 100%;position: absolute;;"></div>
+</ion-content>

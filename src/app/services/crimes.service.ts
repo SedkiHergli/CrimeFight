@@ -37,6 +37,21 @@ export class CrimesService {
       })
     );
    }
+
+   predictCrime(token,data):Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Authorization': 'Bearer ' + token
+      })
+    };
+    return this.http.post(`${this.authService.url}/predictcrime`,data,httpOptions).pipe(
+      catchError(e => {
+  
+        throw new Error(e);
+      })
+    );
+   }
   
   updateCrime(data,email,token){
     const httpOptions = {
